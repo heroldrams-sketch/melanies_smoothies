@@ -12,7 +12,7 @@ st.write("The name on your Smoothie will be:", name_on_order)
 
 
 #Session Load Fluit List
-cnx = st.connections("Snowflake")
+cnx = st.connection("Snowflake")
 session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
